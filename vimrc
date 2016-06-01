@@ -5,9 +5,7 @@
 " ctrlp.vim
 " vim-airline
 " vim-airline-themes
-" vim-buftabline
 " vim-colors-solarized
-" vim-javascript
 
 " Have Pathogen enable plugins, generate help tags
 execute pathogen#infect()
@@ -16,11 +14,6 @@ Helptags
 " Set CtrlP to start in mixed recents/buffers/files mode
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMRU'
-
-" buftabline settings
-set hidden
-nnoremap <C-,> :bnext<CR>
-nnoremap <C-.> :bprev<CR>
 
 " Enable Powerline fonts for proper Airline display
 let g:airline_powerline_fonts = 1
