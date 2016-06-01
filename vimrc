@@ -6,25 +6,94 @@
 " vim-airline
 " vim-airline-themes
 " vim-colors-solarized
+" vim-clojure-static
+" rainbow_parentheses.vim
+
+" -----
+" PATHOGEN SETTINGS
+" -----
 
 " Have Pathogen enable plugins, generate help tags
 execute pathogen#infect()
 Helptags
 
+
+" -----
+" POWERLINE SETTINGS
+" -----
+
 " Set CtrlP to start in mixed recents/buffers/files mode
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMRU'
 
+" Enable Airline's Tabline, disable showing parent directories
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" Remap keys for buffer switching
+nnoremap <C-n> :bprevious<CR>
+nnoremap <C-m> :bnext<CR>
+
 " Enable Powerline fonts for proper Airline display
 let g:airline_powerline_fonts = 1
 set encoding=utf-8
+
 " Make Airline appear all the time
 set laststatus=2
+
 " Set Airline theme
 AirlineTheme solarized
 
 " Set the font with powerline additions
 set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
+
+
+" -----
+" RAINBOW PARENTHESES SETTINGS
+" -----
+
+" Set colors
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+
+" Enable rainbow parens for Clojure files
+au VimEnter *.clj RainbowParenthesesToggle
+au Syntax *.clj RainbowParenthesesLoadRound
+au Syntax *.clj RainbowParenthesesLoadSquare
+au Syntax *.clj RainbowParenthesesLoadBraces
+
+" -----
+" SYNTAX AND THEME
+" -----
+
+" JavaScript preferences
+autocmd filetype javascript setlocal autoindent
+autocmd filetype javascript setlocal expandtab
+autocmd filetype javascript setlocal shiftwidth=4
+autocmd filetype javascript setlocal tabstop=4
+
+" Clojure preferences
+autocmd filetype clojure setlocal autoindent
+autocmd filetype clojure setlocal expandtab
+autocmd filetype clojure setlocal shiftwidth=2
+autocmd filetype clojure setlocal tabstop=2
+au BufNewFile,BufRead *.boot set filetype=clojure
 
 " Set custom syntax theme
 syntax on
