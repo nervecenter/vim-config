@@ -7,7 +7,8 @@
 " vim-airline-themes
 " vim-colors-solarized
 " vim-clojure-static
-" rainbow_parentheses.vim
+" rainbow
+
 
 " -----
 " PATHOGEN SETTINGS
@@ -49,34 +50,11 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
 
 
 " -----
-" RAINBOW PARENTHESES SETTINGS
+" RAINBOW SETTINGS
 " -----
 
-" Set colors
-let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['black',       'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
+let g:rainbow_active = 1
 
-" Enable rainbow parens for Clojure files
-au VimEnter *.clj RainbowParenthesesToggle
-au Syntax *.clj RainbowParenthesesLoadRound
-au Syntax *.clj RainbowParenthesesLoadSquare
-au Syntax *.clj RainbowParenthesesLoadBraces
 
 " -----
 " SYNTAX AND THEME
