@@ -58,6 +58,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 nnoremap <C-n> :bprevious<CR>
 nnoremap <C-m> :bnext<CR>
 
+" Allow switching buffers without writing first
+set hidden
+
 " Enable Powerline fonts for proper Airline display
 let g:airline_powerline_fonts = 1
 set encoding=utf-8
