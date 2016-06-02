@@ -8,6 +8,7 @@
 " vim-colors-solarized
 " vim-clojure-static
 " rainbow
+" vim-orgmode
 
 
 " -----
