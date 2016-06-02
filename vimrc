@@ -12,6 +12,28 @@
 
 
 " -----
+" COMMON KEYMAPS TO LEADER
+" -----
+
+" Make Space the leader key
+let mapleader = "\<Space>"
+
+" Space-o starts CtrlP
+nnoremap <Leader>o :CtrlP<CR>
+
+" Space-b starts CtrlPBuffer
+nnoremap <Leader>b :CtrlPBuffer<CR>
+
+" Space-m starts CtrlPMixed
+nnoremap <Leader>m :CtrlPMixed<CR>
+
+" Space-t splits window horizontally
+nnoremap <Leader>t :vsplit<CR>
+
+" Space-w closes all windows but current
+nnoremap <Leader>w :only<CR>
+
+" -----
 " PATHOGEN SETTINGS
 " -----
 
@@ -77,6 +99,6 @@ au BufNewFile,BufRead *.boot set filetype=clojure
 " Set custom syntax theme
 syntax on
 filetype plugin indent on
-set background=dark
-"set background=light
+"set background=dark
+set background=light
 colorscheme solarized
