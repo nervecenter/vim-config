@@ -9,6 +9,7 @@
 " vim-clojure-static
 " rainbow
 " vim-orgmode
+" nerdcommenter
 
 
 " -----
@@ -91,6 +92,12 @@ autocmd filetype javascript setlocal autoindent
 autocmd filetype javascript setlocal expandtab
 autocmd filetype javascript setlocal shiftwidth=4
 autocmd filetype javascript setlocal tabstop=4
+
+" CSS preferences
+autocmd filetype css setlocal autoindent
+autocmd filetype css setlocal expandtab
+autocmd filetype css setlocal shiftwidth=4
+autocmd filetype css setlocal tabstop=4
 
 " Clojure preferences
 autocmd filetype clojure setlocal autoindent
