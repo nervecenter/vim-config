@@ -10,6 +10,7 @@
 " rainbow
 " vim-orgmode
 " nerdcommenter
+" vim-fugitive
 
 
 " -----
@@ -33,6 +34,10 @@ nnoremap <Leader>t :vsplit<CR>
 
 " Space-w closes all windows but current
 nnoremap <Leader>w :only<CR>
+
+" Space-d closes the current buffer
+nnoremap <Leader>d :bd<CR>
+
 
 " -----
 " PATHOGEN SETTINGS
