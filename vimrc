@@ -117,3 +117,12 @@ filetype plugin indent on
 "set background=dark
 set background=light
 colorscheme solarized
+
+
+" -----
+" GVIM OPTIONS
+" -----
+
+" Hide the toolbar and menu bar
+set guioptions-=m
+set guioptions-=T
