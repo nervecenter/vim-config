@@ -134,7 +134,8 @@ if has("gui_running")
     " Add sources for Windows behavior files
     set nocompatible
     source $VIMRUNTIME/mswin.vim
-    behave mswin
+    "behave mswin
+    behave xterm
 
     " Hide the toolbar and menu bar
     set guioptions-=m
