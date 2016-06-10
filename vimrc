@@ -92,6 +92,12 @@ let g:rainbow_active = 1
 " SYNTAX AND THEME
 " -----
 
+" Vim preferences
+autocmd filetype vim setlocal autoindent
+autocmd filetype vim setlocal expandtab
+autocmd filetype vim setlocal shiftwidth=4
+autocmd filetype vim setlocal tabstop=4
+
 " JavaScript preferences
 autocmd filetype javascript setlocal autoindent
 autocmd filetype javascript setlocal expandtab
@@ -123,6 +129,15 @@ colorscheme solarized
 " GVIM OPTIONS
 " -----
 
-" Hide the toolbar and menu bar
-set guioptions-=m
-set guioptions-=T
+if has("gui_running")
+
+    " Add sources for Windows behavior files
+    set nocompatible
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
+
+    " Hide the toolbar and menu bar
+    set guioptions-=m
+    set guioptions-=T
+
+endif
