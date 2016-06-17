@@ -110,6 +110,12 @@ autocmd filetype css setlocal expandtab
 autocmd filetype css setlocal shiftwidth=4
 autocmd filetype css setlocal tabstop=4
 
+" HTML preferences
+autocmd filetype html setlocal autoindent
+autocmd filetype html setlocal expandtab
+autocmd filetype html setlocal shiftwidth=4
+autocmd filetype html setlocal tabstop=4
+
 " Clojure preferences
 autocmd filetype clojure setlocal autoindent
 autocmd filetype clojure setlocal expandtab
