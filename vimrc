@@ -11,6 +11,7 @@
 " vim-orgmode
 " nerdcommenter
 " vim-fugitive
+" ack.vim
 
 
 " -----
