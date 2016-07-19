@@ -117,6 +117,18 @@ autocmd filetype html setlocal expandtab
 autocmd filetype html setlocal shiftwidth=4
 autocmd filetype html setlocal tabstop=4
 
+" LaTeX preferences
+autocmd filetype tex setlocal autoindent
+autocmd filetype tex setlocal expandtab
+autocmd filetype tex setlocal shiftwidth=4
+autocmd filetype tex setlocal tabstop=4
+
+" D preferences
+autocmd filetype D setlocal autoindent
+autocmd filetype D setlocal expandtab
+autocmd filetype D setlocal shiftwidth=4
+autocmd filetype D setlocal tabstop=4
+
 " Clojure preferences
 autocmd filetype clojure setlocal autoindent
 autocmd filetype clojure setlocal expandtab
@@ -127,8 +139,8 @@ au BufNewFile,BufRead *.boot set filetype=clojure
 " Set custom syntax theme
 syntax on
 filetype plugin indent on
-"set background=dark
-set background=light
+set background=dark
+"set background=light
 colorscheme solarized
 
 
