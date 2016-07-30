@@ -161,3 +161,11 @@ if has("gui_running")
     set guioptions-=T
 
 endif
+
+
+" -----
+" SYSTEM OPTIONS
+" -----
+
+" Turn off swap files for unsaved buffers
+set noswapfile
