@@ -160,9 +160,10 @@ if has("gui_running")
     "behave mswin
     behave xterm
 
-    " Hide the toolbar and menu bar
+    " Hide the toolbar, menu bar, and right hand scroll bar
     set guioptions-=m
     set guioptions-=T
+    set guioptions-=r
 
 endif
 
