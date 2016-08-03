@@ -79,7 +79,11 @@ set laststatus=2
 AirlineTheme solarized
 
 " Set the font with powerline additions
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
+if has("gui_macvim") || has("win32") || has("win64")
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
+else
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+endif
 
 
 " -----
