@@ -113,6 +113,12 @@ let g:rainbow_active = 1
 " SYNTAX AND THEME
 " -----
 
+" F# preferences
+autocmd filetype fsharp setlocal autoindent
+autocmd filetype fsharp setlocal expandtab
+autocmd filetype fsharp setlocal shiftwidth=4
+autocmd filetype fsharp setlocal tabstop=4
+
 " Vim preferences
 autocmd filetype vim setlocal autoindent
 autocmd filetype vim setlocal expandtab
