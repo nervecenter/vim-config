@@ -13,6 +13,7 @@
 " vim-fugitive
 " ack.vim
 " vim-fsharp
+" syntastic
 
 
 " -----
