@@ -12,6 +12,7 @@
 " nerdcommenter
 " vim-fugitive
 " ack.vim
+" fsharp-vim
 
 
 " -----
