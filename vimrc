@@ -12,8 +12,6 @@
 " nerdcommenter
 " vim-fugitive
 " ack.vim
-" vim-fsharp
-" syntastic
 
 
 " -----
@@ -40,20 +38,6 @@ nnoremap <Leader>w :only<CR>
 
 " Space-d closes the current buffer
 nnoremap <Leader>d :bd<CR>
-
-
-" -----
-" SYNTASTIC BEGINNER SETTINGS
-" -----
-"
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 
 " -----
