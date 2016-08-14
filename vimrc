@@ -150,8 +150,8 @@ au BufNewFile,BufRead *.boot set filetype=clojure
 " Set custom syntax theme
 syntax on
 filetype plugin indent on
-set background=dark
-"set background=light
+"set background=dark
+set background=light
 colorscheme solarized
 
 
@@ -167,10 +167,13 @@ if has("gui_running")
     "behave mswin
     behave xterm
 
-    " Hide the toolbar, menu bar, and right hand scroll bar
+    " Hide the toolbar, menu bar, and scroll bars
     set guioptions-=m
     set guioptions-=T
     set guioptions-=r
+    set guioptions-=R
+    set guioptions-=l
+    set guioptions-=L
 
 endif
 
