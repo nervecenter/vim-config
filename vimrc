@@ -16,7 +16,7 @@
 
 
 " -----
-" COMMON KEYMAPS TO LEADER
+" GENERAL VIM SETTINGS
 " -----
 
 " Make Space the leader key
@@ -40,6 +40,13 @@ nnoremap <Leader>w :only<CR>
 " Space-d closes the current buffer
 nnoremap <Leader>d :bd<CR>
 
+" Remap keys for buffer switching
+nnoremap <C-n> :bprevious<CR>
+nnoremap <C-m> :bnext<CR>
+
+" Allow switching buffers without writing first
+set hidden
+
 
 " -----
 " PATHOGEN SETTINGS
@@ -51,23 +58,21 @@ Helptags
 
 
 " -----
-" POWERLINE SETTINGS
+" CTRLP SETTINGS
 " -----
 
 " Set CtrlP to start in mixed recents/buffers/files mode
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPMRU'
 
+
+" -----
+" AIRLINE SETTINGS
+" -----
+
 " Enable Airline's Tabline, disable showing parent directories
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-
-" Remap keys for buffer switching
-nnoremap <C-n> :bprevious<CR>
-nnoremap <C-m> :bnext<CR>
-
-" Allow switching buffers without writing first
-set hidden
 
 " Enable Powerline fonts for proper Airline display
 let g:airline_powerline_fonts = 1
@@ -78,7 +83,8 @@ set laststatus=2
 
 " Set Airline theme
 "AirlineTheme solarized
-let g:airline_theme='solarized'
+"let g:airline_theme='solarized'
+let g:airline_theme='papercolor'
 
 " Set the font with powerline additions
 if has("gui_macvim") || has("win32") || has("win64")
@@ -152,8 +158,9 @@ au BufNewFile,BufRead *.boot set filetype=clojure
 syntax on
 filetype plugin indent on
 "set background=dark
-set background=light
-colorscheme solarized
+set background=dark
+"colorscheme solarized
+colorscheme PaperColor
 
 
 " -----
