@@ -77,7 +77,8 @@ set encoding=utf-8
 set laststatus=2
 
 " Set Airline theme
-AirlineTheme solarized
+"AirlineTheme solarized
+let g:airline_theme='solarized'
 
 " Set the font with powerline additions
 if has("gui_macvim") || has("win32") || has("win64")
