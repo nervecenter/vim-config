@@ -47,6 +47,12 @@ nnoremap <C-m> :bnext<CR>
 " Allow switching buffers without writing first
 set hidden
 
+" Highlight current line
+set cursorline
+
+" Relative line numbers
+set number
+set relativenumber
 
 " -----
 " PATHOGEN SETTINGS
@@ -105,53 +111,15 @@ let g:rainbow_active = 1
 " SYNTAX AND THEME
 " -----
 
-" F# preferences
-autocmd filetype fsharp setlocal autoindent
-autocmd filetype fsharp setlocal expandtab
-autocmd filetype fsharp setlocal shiftwidth=4
-autocmd filetype fsharp setlocal tabstop=4
-
-" Vim preferences
-autocmd filetype vim setlocal autoindent
-autocmd filetype vim setlocal expandtab
-autocmd filetype vim setlocal shiftwidth=4
-autocmd filetype vim setlocal tabstop=4
-
-" JavaScript preferences
-autocmd filetype javascript setlocal autoindent
-autocmd filetype javascript setlocal expandtab
-autocmd filetype javascript setlocal shiftwidth=4
-autocmd filetype javascript setlocal tabstop=4
-
-" CSS preferences
-autocmd filetype css setlocal autoindent
-autocmd filetype css setlocal expandtab
-autocmd filetype css setlocal shiftwidth=4
-autocmd filetype css setlocal tabstop=4
-
-" HTML preferences
-autocmd filetype html setlocal autoindent
-autocmd filetype html setlocal expandtab
-autocmd filetype html setlocal shiftwidth=4
-autocmd filetype html setlocal tabstop=4
-
-" LaTeX preferences
-autocmd filetype tex setlocal autoindent
-autocmd filetype tex setlocal expandtab
-autocmd filetype tex setlocal shiftwidth=4
-autocmd filetype tex setlocal tabstop=4
-
-" D preferences
-autocmd filetype D setlocal autoindent
-autocmd filetype D setlocal expandtab
-autocmd filetype D setlocal shiftwidth=4
-autocmd filetype D setlocal tabstop=4
-
-" Clojure preferences
-autocmd filetype clojure setlocal autoindent
-autocmd filetype clojure setlocal expandtab
-autocmd filetype clojure setlocal shiftwidth=2
-autocmd filetype clojure setlocal tabstop=2
+" Language preferences
+autocmd filetype fsharp     setlocal autoindent expandtab shiftwidth=4 tabstop=4
+autocmd filetype vim        setlocal autoindent expandtab shiftwidth=4 tabstop=4
+autocmd filetype javascript setlocal autoindent expandtab shiftwidth=4 tabstop=4
+autocmd filetype css        setlocal autoindent expandtab shiftwidth=4 tabstop=4
+autocmd filetype html       setlocal autoindent expandtab shiftwidth=4 tabstop=4
+autocmd filetype tex        setlocal autoindent expandtab shiftwidth=4 tabstop=4
+autocmd filetype D          setlocal autoindent expandtab shiftwidth=4 tabstop=4
+autocmd filetype clojure    setlocal autoindent expandtab shiftwidth=2 tabstop=2
 au BufNewFile,BufRead *.boot set filetype=clojure
 
 " Set custom syntax theme
