@@ -1,19 +1,21 @@
 " vimrc - Vim Customization
 " 2016 - Chris Collazo
 
-" Plugins currently installed via Pathogen:
-" ctrlp.vim
-" vim-airline
-" vim-airline-themes
-" vim-colors-solarized
-" vim-clojure-static
-" rainbow
-" vim-orgmode
-" nerdcommenter
-" vim-fugitive
-" ack.vim
-" fsharp-vim
+call plug#begin('~/.vim/plugged')
+    
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'altercation/vim-colors-solarized'
+Plug 'guns/vim-clojure-static'
+Plug 'luochen1990/rainbow'
+Plug 'jceb/vim-orgmode'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-fugitive'
+Plug 'kongo2002/fsharp-vim'
+Plug 'NLKNguyen/papercolor-theme'
 
+call plug#end()
 
 " -----
 " GENERAL VIM SETTINGS
