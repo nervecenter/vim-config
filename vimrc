@@ -1,19 +1,22 @@
 " vimrc - Vim Customization
 " 2016 - Chris Collazo
 
-" Plugins currently installed via Pathogen:
-" ctrlp.vim
-" vim-airline
-" vim-airline-themes
-" vim-colors-solarized
-" vim-clojure-static
-" rainbow
-" vim-orgmode
-" nerdcommenter
-" vim-fugitive
-" ack.vim
-" fsharp-vim
+call plug#begin('~/.vim/plugged')
+    
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'altercation/vim-colors-solarized'
+"Plug 'guns/vim-clojure-static'
+Plug 'luochen1990/rainbow'
+Plug 'jceb/vim-orgmode'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-fugitive'
+Plug 'kongo2002/fsharp-vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'wlangstroth/vim-racket'
 
+call plug#end()
 
 " -----
 " GENERAL VIM SETTINGS
@@ -22,11 +25,14 @@
 " Make Space the leader key
 let mapleader = "\<Space>"
 
-" Space-o starts CtrlP
-nnoremap <Leader>o :CtrlP<CR>
+" Space-f starts CtrlP in all files mode
+nnoremap <Leader>f :CtrlP<CR>
 
 " Space-b starts CtrlPBuffer
 nnoremap <Leader>b :CtrlPBuffer<CR>
+
+" Space-r starts CtrlPMRU
+nnoremap <Leader>r :CtrlPMRU<CR>
 
 " Space-m starts CtrlPMixed
 nnoremap <Leader>m :CtrlPMixed<CR>
@@ -53,14 +59,6 @@ set cursorline
 " Relative line numbers
 set number
 set relativenumber
-
-" -----
-" PATHOGEN SETTINGS
-" -----
-
-" Have Pathogen enable plugins, generate help tags
-execute pathogen#infect()
-Helptags
 
 
 " -----
@@ -89,8 +87,8 @@ set laststatus=2
 
 " Set Airline theme
 "AirlineTheme solarized
-let g:airline_theme='solarized'
-"let g:airline_theme='papercolor'
+"let g:airline_theme='solarized'
+let g:airline_theme='papercolor'
 
 " Set the font with powerline additions
 if has("gui_macvim") || has("win32") || has("win64")
@@ -121,15 +119,16 @@ autocmd filetype html       setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype tex        setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype D          setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype rust       setlocal autoindent expandtab shiftwidth=4 tabstop=4
+autocmd filetype racket     setlocal autoindent expandtab shiftwidth=2 tabstop=2
 autocmd filetype clojure    setlocal autoindent expandtab shiftwidth=2 tabstop=2
 au BufNewFile,BufRead *.boot set filetype=clojure
 
 " Set custom syntax theme
 syntax on
 filetype plugin indent on
-set background=light
-colorscheme solarized
-"colorscheme PaperColor
+set background=dark
+"colorscheme solarized
+colorscheme PaperColor
 
 
 " -----
