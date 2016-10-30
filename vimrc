@@ -14,6 +14,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'kongo2002/fsharp-vim'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'wlangstroth/vim-racket'
 
 call plug#end()
 
@@ -56,14 +57,6 @@ set cursorline
 set number
 set relativenumber
 
-" -----
-" PATHOGEN SETTINGS
-" -----
-
-" Have Pathogen enable plugins, generate help tags
-execute pathogen#infect()
-Helptags
-
 
 " -----
 " CTRLP SETTINGS
@@ -91,8 +84,8 @@ set laststatus=2
 
 " Set Airline theme
 "AirlineTheme solarized
-let g:airline_theme='solarized'
-"let g:airline_theme='papercolor'
+"let g:airline_theme='solarized'
+let g:airline_theme='papercolor'
 
 " Set the font with powerline additions
 if has("gui_macvim") || has("win32") || has("win64")
@@ -123,15 +116,16 @@ autocmd filetype html       setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype tex        setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype D          setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype rust       setlocal autoindent expandtab shiftwidth=4 tabstop=4
+autocmd filetype racket     setlocal autoindent expandtab shiftwidth=2 tabstop=2
 autocmd filetype clojure    setlocal autoindent expandtab shiftwidth=2 tabstop=2
 au BufNewFile,BufRead *.boot set filetype=clojure
 
 " Set custom syntax theme
 syntax on
 filetype plugin indent on
-set background=light
-colorscheme solarized
-"colorscheme PaperColor
+set background=dark
+"colorscheme solarized
+colorscheme PaperColor
 
 
 " -----
