@@ -25,11 +25,14 @@ call plug#end()
 " Make Space the leader key
 let mapleader = "\<Space>"
 
-" Space-o starts CtrlP
-nnoremap <Leader>o :CtrlP<CR>
+" Space-f starts CtrlP in all files mode
+nnoremap <Leader>f :CtrlP<CR>
 
 " Space-b starts CtrlPBuffer
 nnoremap <Leader>b :CtrlPBuffer<CR>
+
+" Space-r starts CtrlPMRU
+nnoremap <Leader>r :CtrlPMRU<CR>
 
 " Space-m starts CtrlPMixed
 nnoremap <Leader>m :CtrlPMixed<CR>
