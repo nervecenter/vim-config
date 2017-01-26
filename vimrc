@@ -15,6 +15,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'kongo2002/fsharp-vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'wlangstroth/vim-racket'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -88,7 +89,8 @@ set laststatus=2
 " Set Airline theme
 "AirlineTheme solarized
 "let g:airline_theme='solarized'
-let g:airline_theme='papercolor'
+"let g:airline_theme='papercolor'
+let g:airline_theme='gruvbox'
 
 " Set the font with powerline additions
 if has("gui_macvim") || has("win32") || has("win64")
@@ -117,7 +119,7 @@ autocmd filetype javascript setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype css        setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype html       setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype tex        setlocal autoindent expandtab shiftwidth=4 tabstop=4
-autocmd filetype D          setlocal autoindent expandtab shiftwidth=4 tabstop=4
+autocmd filetype d          setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype rust       setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype racket     setlocal autoindent expandtab shiftwidth=2 tabstop=2
 autocmd filetype clojure    setlocal autoindent expandtab shiftwidth=2 tabstop=2
@@ -128,7 +130,8 @@ syntax on
 filetype plugin indent on
 set background=dark
 "colorscheme solarized
-colorscheme PaperColor
+"colorscheme PaperColor
+colorscheme gruvbox
 
 
 " -----
