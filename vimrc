@@ -86,6 +86,10 @@ set encoding=utf-8
 " Make Airline appear all the time
 set laststatus=2
 
+" Set the separators
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+
 " Set Airline theme
 "AirlineTheme solarized
 "let g:airline_theme='solarized'
