@@ -4,10 +4,11 @@
 call plug#begin('~/.vim/plugged')
     
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jeetsukumaran/vim-filebeagle'
+Plug 'ayu-theme/ayu-vim' 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
-"Plug 'guns/vim-clojure-static'
 Plug 'luochen1990/rainbow'
 Plug 'jceb/vim-orgmode'
 Plug 'scrooloose/nerdcommenter'
@@ -27,7 +28,7 @@ call plug#end()
 let mapleader = "\<Space>"
 
 " Space-f starts CtrlP in all files mode
-nnoremap <Leader>f :CtrlP<CR>
+nnoremap <Leader>f :CtrlP ~<CR>
 
 " Space-b starts CtrlPBuffer
 nnoremap <Leader>b :CtrlPBuffer<CR>
@@ -43,6 +44,8 @@ nnoremap <Leader>t :vsplit<CR>
 
 " Space-w closes all windows but current
 nnoremap <Leader>w :only<CR>
+
+" REMEMBER CONTROLS: Ctrl-W + Direction switches panes
 
 " Space-d closes the current buffer
 nnoremap <Leader>d :bd<CR>
@@ -87,8 +90,8 @@ set encoding=utf-8
 set laststatus=2
 
 " Set the separators
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+"let g:airline_left_sep = ''
+"let g:airline_right_sep = ''
 
 " Set Airline theme
 "AirlineTheme solarized
@@ -132,9 +135,16 @@ au BufNewFile,BufRead *.boot set filetype=clojure
 " Set custom syntax theme
 syntax on
 filetype plugin indent on
+set termguicolors     " enable true colors support
+
+"let ayucolor="light"
+"let ayucolor="mirage"
+"let ayucolor="dark"
+
 set background=dark
 "colorscheme solarized
 "colorscheme PaperColor
+"colorscheme ayu
 colorscheme gruvbox
 
 
