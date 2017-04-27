@@ -93,12 +93,6 @@ set laststatus=2
 "let g:airline_left_sep = ''
 "let g:airline_right_sep = ''
 
-" Set Airline theme
-"AirlineTheme solarized
-"let g:airline_theme='solarized'
-"let g:airline_theme='papercolor'
-let g:airline_theme='gruvbox'
-
 " Set the font with powerline additions
 if has("gui_macvim") || has("win32") || has("win64")
     set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
@@ -123,6 +117,7 @@ autocmd filetype fsharp     setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype haskell    setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype vim        setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype javascript setlocal autoindent expandtab shiftwidth=4 tabstop=4
+autocmd filetype java       setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype css        setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype html       setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype tex        setlocal autoindent expandtab shiftwidth=4 tabstop=4
@@ -132,21 +127,34 @@ autocmd filetype racket     setlocal autoindent expandtab shiftwidth=2 tabstop=2
 autocmd filetype clojure    setlocal autoindent expandtab shiftwidth=2 tabstop=2
 au BufNewFile,BufRead *.boot set filetype=clojure
 
-" Set custom syntax theme
 syntax on
 filetype plugin indent on
 set termguicolors     " enable true colors support
 
+"
+" Color Themes
+"
+
+" Ayu
 "let ayucolor="light"
 "let ayucolor="mirage"
 "let ayucolor="dark"
-
-set background=dark
-"colorscheme solarized
-"colorscheme PaperColor
 "colorscheme ayu
-colorscheme gruvbox
 
+" Solarized
+"AirlineTheme solarized
+"let g:airline_theme='solarized'
+"colorscheme solarized
+"
+" PaperColor
+"colorscheme PaperColor
+"let g:airline_theme='papercolor'
+
+" Gruvbox
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
+
+set background = light
 
 " -----
 " GVIM OPTIONS
