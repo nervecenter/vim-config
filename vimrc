@@ -123,6 +123,8 @@ autocmd filetype html       setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype tex        setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype d          setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype rust       setlocal autoindent expandtab shiftwidth=4 tabstop=4
+autocmd filetype c          setlocal autoindent expandtab shiftwidth=4 tabstop=4
+autocmd filetype cpp        setlocal autoindent expandtab shiftwidth=4 tabstop=4
 autocmd filetype racket     setlocal autoindent expandtab shiftwidth=2 tabstop=2
 autocmd filetype clojure    setlocal autoindent expandtab shiftwidth=2 tabstop=2
 au BufNewFile,BufRead *.boot set filetype=clojure
